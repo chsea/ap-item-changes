@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 var Promise = require('bluebird');
 var readFile = Promise.promisify(require("fs").readFile);
 var https = require("https");
