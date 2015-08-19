@@ -1,0 +1,23 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dperrelly/AP-Item-Eras.git"
+  },
+  "author": "Daniel Perrelly, Chelsea Du",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dperrelly/AP-Item-Eras/issues"
+  },
+  "homepage": "https://github.com/Dperrelly/AP-Item-Eras#readme",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "mongoose": "^4.1.3"
+  }
+}

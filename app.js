@@ -14,7 +14,17 @@ var Match = models.Match;
 // })
 
 https.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/seaasong?api_key=daf26bdd-8fb1-4722-b26c-496eed56edbc', function(res) {
-  res.on('data', function(d) {
-    console.log(JSON.parse(d));
+	var responseBody = "";
+
+	res.on('data', function(dataChunk) {
+		responseBody += dataChunk;
   });
+
+	res.on('end', function(){
+		responseBody = JSON.parse(responseBody);
+		console.log("data: ", responseBody);
+	});
+
+}).on('error', function(err) {
+  	console.error(err);
 });
