@@ -14,7 +14,8 @@ var https = require("https");
 //   matches.forEach
 // })
 
-https.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/seaasong?api_key=daf26bdd-8fb1-4722-b26c-496eed56edbc', function(err, data) {
-  if (err) console.error(err);
-  console.log(data);
+https.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/seaasong?api_key=daf26bdd-8fb1-4722-b26c-496eed56edbc', function(res) {
+  res.on('data', function(d) {
+    console.log(JSON.parse(d));
+  });
 });
