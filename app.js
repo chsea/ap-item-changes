@@ -1,9 +1,8 @@
 var Promise = require('bluebird');
 var readFile = Promise.promisify(require("fs").readFile);
 var https = require("https");
-//var get = Promise.promisify(require("https").get);
-// var models = require('./index.js');
-// var Match = models.Match;
+var models = require('./index.js');
+var Match = models.Match;
 
 // var matchPath = './AP_ITEM_DATASET/5.11/NORMAL_5X5/';
 // var matches = readFile(matchPath + 'NA.json').then(function(matches) {
