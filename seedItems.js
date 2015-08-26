@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
 var http = require('http');
-var models = require('./models');
+var models = require('./models/');
 var Item = models.Item;
 
 http.get('http://ddragon.leagueoflegends.com/cdn/5.11.1/data/en_US/item.json', function(res) {

@@ -19,8 +19,8 @@ var championSchema = new mongoose.Schema({
   avgKillsPost: Number,
   avgAssistsPre: Number,
   avgAssistsPost: Number,
-  itemsPre: [Number],
-  itemsPost: [Number],
+  itemsPre: {},
+  itemsPost: {}
 });
 
 championSchema.virtual('avgKdaPre').get(function() {
@@ -30,9 +30,5 @@ championSchema.virtual('avgKdaPre').get(function() {
 championSchema.virtual('avgKdaPost').get(function() {
   return (this.avgKillsPost + this.avgAssistsPost) / this.avgDeathsPost;
 });
-
-championSchema.methods.getAvg = function(field){
-
-}
 
 module.exports = mongoose.model('Champion', championSchema);
