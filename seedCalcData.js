@@ -45,3 +45,45 @@ var Participant = models.Participant;
 //     });
 //   });
 // });
+
+function averageOfField(model, field, select){
+  var total = 0;
+  return model.find(select).exec().then(function(documentArray){
+    var countPromise = model.count(select).exec();
+    console.log("documentArray: ", documentArray);
+    documentArray.forEach(function(doc){
+      total += doc[field];
+    });
+    return countPromise.then(function(count){
+      return total / count;
+    });
+  }).then(null, function(err){
+    console.error(err);
+  });
+}
+
+function setAvg(model, field, avgModel, avgField, patch, match){
+  model.find().exec().then(function(docs){
+    docs.forEach(function(doc){
+      var select = {postPatch: patch};
+      select[match] = doc.id;
+      averageOfField(avgModel, avgField, select)
+      .then(function(average){
+        if(isNaN(average)) throw new Error(String(doc.id) + ' has no average');
+        console.log(String(doc.id) + " average: ", average);
+        doc[field] = average;
+        console.log(doc);
+        doc.save().then(function(doc){
+          console.log("saved: " + doc.id);
+        })
+        .then(null, function(err){console.log('save didnt work');});
+      })
+      .then(null, function(err){
+        console.log(err.message);
+      });
+    });
+  });
+}
+
+// setAvg(Champion, 'avgMagicDamagePre', Participant, 'magicDamage', false, 'champion');
+setAvg(Champion, 'avgTotalDamageToChampsPost', Participant, 'totalDamageToChamps', true, 'champion');
