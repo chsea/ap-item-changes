@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
-var readFile = Promise.promisify(require("fs").readFile);
-var writeFile = Promise.promisify(require("fs").writeFile);
+var fs = require('fs');
+var readFile = Promise.promisify(fs.readFile);
+var writeFile = Promise.promisify(fs.writeFile);
+var appendFile = Promise.promisify(fs.appendFile);
 var https = require('https');
 var models = require('./models');
 var Participant = models.Participant;
@@ -9,9 +11,6 @@ var Participant = models.Participant;
 function seeder(matches) {
 	readFile('./currentIndex.txt').then(function(indexString) {
 		index = parseInt(indexString);
-		// for(var i = 0; i < 10; i++){
-		// 	addToDb(matches[index + i]);
-		// }
 		addToDb(matches[index]);
 		console.log(index);
 		writeFile('./currentIndex.txt', String(++index));
@@ -39,19 +38,27 @@ function addToDb(match) {
       matchData.participants.forEach(function(p) {
         var stats = p.stats;
         var participant = {
+          matchID: matchData.matchId,
           champion: p.championId,
           lane: p.timeline.lane,
           items: [stats.item0, stats.item1, stats.item2, stats.item3, stats.item4, stats.item5, stats.item6],
           winner: stats.winner,
-          magicDamageDealt: stats.magicDamageDealt,
-          magicDamageDealtToChampions: stats.magicDamageDealtToChampions,
+          magicDamage: stats.magicDamageDealt,
+          magicDamageToChamps: stats.magicDamageDealtToChampions,
+          totalDamageToChamps: stats.totalDamageDealtToChampions,
           kills: stats.kills,
           deaths: stats.deaths,
           assists: stats.assists,
           postPatch: true
         };
         Participant.create(participant, function(err, data) {
-          if(err) console.error(err);
+          if(err){
+            appendFile('erroredMatch.txt', match).then(function(){
+            	console.log("match index:" + match + " errored! appended index to file");
+            }).catch(function(){
+            	console.log('appendfile failed on match index: ' + match);
+            });
+          }
         });
       });
     });
