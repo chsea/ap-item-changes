@@ -31,4 +31,12 @@ championSchema.virtual('avgKdaPost').get(function() {
   return (this.avgKillsPost + this.avgAssistsPost) / this.avgDeathsPost;
 });
 
+championSchema.virtual('percentPlayedPre').get(function() {
+  return (this.countPre / Participant.getTotalMatchesPre());
+});
+
+championSchema.virtual('percentPlayedPost').get(function() {
+  return (this.countPost / Participant.getTotalMatchesPost());
+});
+
 module.exports = mongoose.model('Champion', championSchema);

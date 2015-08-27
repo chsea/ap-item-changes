@@ -20,17 +20,17 @@ function seeder(matches) {
 	});
 }
 
-var matchPath = './../AP_ITEM_DATASET/5.14/RANKED_SOLO/';
-readFile(matchPath + 'NA.json').then(function(matches) {
-// readFile('seedError.txt', 'utf-8').then(function(matches) {
+var matchPath = './../AP_ITEM_DATASET/5.11/NORMAL_5x5/';
+readFile(matchPath + 'KR.json').then(function(matches) {
   matches = JSON.parse(matches);
-	// matches = matches.split('\n');
+// readFile('seedError.txt', 'utf-8').then(function(matches) {
+// 	matches = matches.split('\n');
 	//console.log(matches);
 	setInterval(seeder, 1250, matches);
 });
 
 function addToDb(match) {
-  https.get('https://na.api.pvp.net/api/lol/na/v2.2/match/' + match + '?includeTimeline=true&api_key=ef7f275e-f8cc-472a-82db-e19288204ee1', function(res) {
+  https.get('https://kr.api.pvp.net/api/lol/kr/v2.2/match/' + match + '?includeTimeline=true&api_key=ef7f275e-f8cc-472a-82db-e19288204ee1', function(res) {
     var matchData = '';
     res.on('data', function(dataChunk) {
       matchData += dataChunk;
@@ -43,17 +43,15 @@ function addToDb(match) {
 				appendFile('erroredMatch.txt', match + '\n').then(function(){
 					console.log("match index:" + match + " errored!");
 				}).catch(function(){
-					console.log("\007");
 					console.log('appendfile failed on match index: ' + match);
 				});
 				return;
 			}
-			
+
 			if (!matchData.participants) {
 				appendFile('erroredMatch.txt', match + '\n').then(function(){
 					console.log("match index:" + match + " errored!");
 				}).catch(function(){
-					console.log("\007");
 					console.log('appendfile failed on match index: ' + match);
 				});
 				return;
@@ -73,14 +71,13 @@ function addToDb(match) {
           kills: stats.kills,
           deaths: stats.deaths,
           assists: stats.assists,
-          postPatch: true
+          postPatch: false
         };
         Participant.create(participant, function(err, data) {
           if(err){
             appendFile('erroredMatch.txt', match).then(function(){
             	console.log("match index:" + match + " errored! appended index to file");
             }).catch(function(){
-							console.log("\007");
             	console.log('appendfile failed on match index: ' + match);
             });
           }

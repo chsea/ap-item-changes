@@ -21,4 +21,12 @@ participantSchema.methods.hasItem = function(item) {
   });
 };
 
+participantSchema.statics.getTotalMatchesPre = function() {
+  return 1840;
+};
+
+participantSchema.statics.getTotalMatchesPost = function() {
+  return 2440;
+};
+
 module.exports = mongoose.model('Participant', participantSchema);

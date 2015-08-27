@@ -47,19 +47,23 @@ var Participant = models.Participant;
 // });
 
 //Champions for Items
-Item.find().exec().then(function(items) {
-  items.forEach(function(item) {
-    Champion.find({itemsPre: item.id}).exec().then(function(champions) {
-      allChamps = champions.reduce(function(items, champion) {
-        items[champion.id] = champion.itemsPre[item.id];
-        return items;
-      }, {});
-      console.log('all champions: ', allChamps);
-      item.champsPre = allChamps;
-      item.markModified('itemsPre');
-      item.save();
-    });
-  });
+// Item.find().exec().then(function(items) {
+//   items.forEach(function(item) {
+//     Champion.find({itemsPre: item.id}).exec().then(function(champions) {
+//       allChamps = champions.reduce(function(items, champion) {
+//         items[champion.id] = champion.itemsPre[item.id];
+//         return items;
+//       }, {});
+//       console.log('all champions: ', allChamps);
+//       item.champsPre = allChamps;
+//       item.markModified('itemsPre');
+//       item.save();
+//     });
+//   });
+// });
+
+Champion.findOne().exec().then(function(champ) {
+  console.log(champ.countPost);
 });
 
 // function averageOfField(model, field, select){
