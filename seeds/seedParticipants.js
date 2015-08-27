@@ -5,7 +5,7 @@ var readFile = Promise.promisify(fs.readFile);
 var writeFile = Promise.promisify(fs.writeFile);
 var appendFile = Promise.promisify(fs.appendFile);
 var https = require('https');
-var models = require('./models');
+var models = require('./../models');
 var Participant = models.Participant;
 
 function seeder(matches) {
@@ -20,22 +20,45 @@ function seeder(matches) {
 	});
 }
 
-var matchPath = './AP_ITEM_DATASET/5.14/NORMAL_5X5/';
+var matchPath = './../AP_ITEM_DATASET/5.14/RANKED_SOLO/';
 readFile(matchPath + 'NA.json').then(function(matches) {
+// readFile('seedError.txt', 'utf-8').then(function(matches) {
   matches = JSON.parse(matches);
+	// matches = matches.split('\n');
+	//console.log(matches);
 	setInterval(seeder, 1250, matches);
 });
 
-//daf26bdd-8fb1-4722-b26c-496eed56edbc
 function addToDb(match) {
-  https.get('https://na.api.pvp.net/api/lol/na/v2.2/match/' + match + '?includeTimeline=true&api_key=daf26bdd-8fb1-4722-b26c-496eed56edbc', function(res) {
+  https.get('https://na.api.pvp.net/api/lol/na/v2.2/match/' + match + '?includeTimeline=true&api_key=ef7f275e-f8cc-472a-82db-e19288204ee1', function(res) {
     var matchData = '';
     res.on('data', function(dataChunk) {
       matchData += dataChunk;
     });
 
     res.on('end', function(){
-      matchData = JSON.parse(matchData);
+			try {
+      	matchData = JSON.parse(matchData);
+			} catch(err) {
+				appendFile('erroredMatch.txt', match + '\n').then(function(){
+					console.log("match index:" + match + " errored!");
+				}).catch(function(){
+					console.log("\007");
+					console.log('appendfile failed on match index: ' + match);
+				});
+				return;
+			}
+			
+			if (!matchData.participants) {
+				appendFile('erroredMatch.txt', match + '\n').then(function(){
+					console.log("match index:" + match + " errored!");
+				}).catch(function(){
+					console.log("\007");
+					console.log('appendfile failed on match index: ' + match);
+				});
+				return;
+			}
+
       matchData.participants.forEach(function(p) {
         var stats = p.stats;
         var participant = {

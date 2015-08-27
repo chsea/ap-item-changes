@@ -45,24 +45,6 @@ var championSchema = new mongoose.Schema({
   itemsPost: [Number],
 });
 
-function averageOfField(model, field){
-  var total = 0;
-  return model.find().exec().then(function(documentArray){
-    var countPromise = model.count().exec();
-    console.log("documentArray: ", documentArray);
-    documentArray.forEach(function(doc){
-      total += doc[field];
-      console.log("field: ", field);
-      console.log("doc[field]: ", doc[field]);
-      console.log("doc: ", doc);
-    });
-    return countPromise.then(function(count){
-      return total / count;
-    });
-  }).then(null, function(err){
-    console.error(err);
-  });
-}
 
 
 
@@ -85,40 +67,30 @@ function averageOfField(model, field, select){
   });
 }
 
-
-Item.find().exec().then(function(items){
-  items.forEach(function(item){
-    averageOfField(models.Participant, 'totalDamageToChamps', {postPatch: true, items: item.id})
-    .then(function(average){
-      if(isNaN(average)) throw new Error(String(item.id) + ' has no average');
-      console.log(String(item.id) + " average: ", average);
-      item.avgTotalDamageToChampsPost = average;
-      console.log(item);
-      item.save().then(function(item){
-        console.log("saved: " + item.id);
+function setAvg(model, field, avgModel, avgField, patch, match){
+  model.find().exec().then(function(docs){
+    docs.forEach(function(doc){
+      var select = {postPatch: patch};
+      select[match] = doc.id;
+      averageOfField(avgModel, avgField, select)
+      .then(function(average){
+        if(isNaN(average)) throw new Error(String(doc.id) + ' has no average');
+        console.log(String(doc.id) + " average: ", average);
+        doc[field] = average;
+        console.log(doc);
+        doc.save().then(function(doc){
+          console.log("saved: " + doc.id);
+        })
+        .then(null, function(err){console.log('save didnt work');});
       })
-      .then(null, function(err){console.log('save didnt work');});
-    })
-    .then(null, function(err){
-      console.log(err.message);
+      .then(null, function(err){
+        console.log(err.message);
+      });
     });
   });
-});
+}
 
-
-
-
-var itemSchema = new mongoose.Schema({
-  id: {type: Number, required: true, unique: true},
-  name: {type: String, required: true},
-  changed: {type: Boolean},
-  patchNotes: String,
-  countPre: Number,
-  avgTotalDamageToChampsPost: Number
-  countPost: Number,
-  championsPre: [Number],
-  championsPost: [Number]
-});
+setAvg(Champion, 'avgMagicDamagePost', Participant, 'magicDamage', true, 'champion');
 
 
 

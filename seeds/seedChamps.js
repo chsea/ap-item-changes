@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
 var https = require('https');
-var models = require('./models/index2');
+var models = require('./../models/index2');
 var Champion = models.Champion;
 
 var count = 0;
