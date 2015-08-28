@@ -20,7 +20,7 @@ function seeder(matches) {
 	});
 }
 
-var matchPath = './../AP_ITEM_DATASET/5.11/NORMAL_5x5/';
+var matchPath = './../AP_ITEM_DATASET/5.14/NORMAL_5x5/';
 readFile(matchPath + 'KR.json').then(function(matches) {
   matches = JSON.parse(matches);
 // readFile('seedError.txt', 'utf-8').then(function(matches) {
@@ -30,7 +30,7 @@ readFile(matchPath + 'KR.json').then(function(matches) {
 });
 
 function addToDb(match) {
-  https.get('https://kr.api.pvp.net/api/lol/kr/v2.2/match/' + match + '?includeTimeline=true&api_key=ef7f275e-f8cc-472a-82db-e19288204ee1', function(res) {
+  https.get('https://kr.api.pvp.net/api/lol/kr/v2.2/match/' + match + '?includeTimeline=false&api_key=3e48c786-63c1-4b44-bde5-7d04de61247f', function(res) {
     var matchData = '';
     res.on('data', function(dataChunk) {
       matchData += dataChunk;
@@ -71,7 +71,7 @@ function addToDb(match) {
           kills: stats.kills,
           deaths: stats.deaths,
           assists: stats.assists,
-          postPatch: false
+          postPatch: true
         };
         Participant.create(participant, function(err, data) {
           if(err){

@@ -4,7 +4,6 @@ var models = require('./../models/index2');
 var Item = models.Item;
 var Champion = models.Champion;
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
@@ -25,6 +24,14 @@ router.get('/all-champs', function(req, res, next) {
       return champion.percentPlayedPost;
     });
     res.json({name: name, percentPlayedPre: percentPlayedPre, percentPlayedPost: percentPlayedPost});
+  });
+});
+
+router.get('/:champion', function(req, res, next) {
+  var champName = req.params.champion;
+
+  Champion.findOne({name: champName}).exec().then(function(champ) {
+    res.json({name: champ.name, title: champ.title});
   });
 });
 

@@ -11,6 +11,7 @@
 	</head>
 	<body>
 		<canvas id="canvas" width="3500" height="500"></canvas>
+		<div id="custom-tooltip"></div>
 		<script src="chart.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -38,17 +39,48 @@
 
 			var ctx = document.getElementById("canvas").getContext("2d");
 
+			function showTooltip(tooltip) {
+				var tooltipEl = $('#custom-tooltip');
+
+				if (!tooltip) {
+					tooltipEl.hide();
+					return;
+				}
+
+				$.get(tooltip.title, function(data){
+					console.log(tooltip.title);
+					tooltipEl.show();
+
+					var innerHtml = [
+						"<img src='http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/" + tooltip.title.replace(' ','') + ".png' width='100' height = '100' style='float: left'>",
+						"<h1>" + data.name + "</h1>",
+						"<h2>" + data.title + "</h2>"
+					]
+					tooltipEl.html(innerHtml.join(''));
+				})
+				console.dir(tooltip);
+				var windowWidth = window.outerWidth;
+				var tooltipX = tooltip.x;
+				var left = tooltipX > windowWidth ? tooltipX % windowWidth : tooltipX;
+
+				tooltipEl.css({
+          position: 'fixed',
+          left: event.clientX + 10 + 'px',
+          bottom: tooltip.chart.canvas.offsetTop + tooltip.y + 'px',
+          fontFamily: tooltip.fontFamily,
+          fontSize: tooltip.fontSize,
+          fontStyle: tooltip.fontStyle,
+					backgroundColor: '#333',
+					padding: '10px'
+      	})
+			}
+
 			window.myBarChart = new Chart(ctx).Bar(barChartData, {
 				responsive: false,
-				scaleLabel: "<%= Number(value * 100).toFixed(3) + ' %'%>",
-				barShowStroke: false
+				scaleLabel: "<%= Number(value * 100).toFixed(2) + ' %'%>",
+				barShowStroke: false,
+				customTooltips: showTooltip
 			});
-
-			canvas.onclick = function(evt){
-		    var activeBars = myBarChart.getBarsAtEvent(evt);
-				console.dir(activeBars);
-			};
-
 		})
 	}
 	</script>
