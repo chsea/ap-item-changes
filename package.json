@@ -1,28 +1,23 @@
 {
-  "name": "a",
-  "version": "1.0.0",
+  "name": "tripplanner",
+  "version": "0.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon -e html,scss,js app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dperrelly/AP-Item-Eras.git"
-  },
-  "author": "Daniel Perrelly, Chelsea Du",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dperrelly/AP-Item-Eras/issues"
-  },
-  "homepage": "https://github.com/Dperrelly/AP-Item-Eras#readme",
+  "author": "chsea.du@gmail.com",
   "dependencies": {
     "bluebird": "^2.9.34",
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "mongoose": "^4.1.3",
-    "nodemon": "^1.4.1",
+    "mongoose": "^4.1.2",
+    "morgan": "^1.6.1",
+    "node-sass-middleware": "^0.9.0",
     "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.4.1"
   }
 }

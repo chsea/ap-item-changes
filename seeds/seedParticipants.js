@@ -21,10 +21,10 @@ function seeder(matches) {
 }
 
 var matchPath = './../AP_ITEM_DATASET/5.14/NORMAL_5x5/';
-readFile(matchPath + 'KR.json').then(function(matches) {
-  matches = JSON.parse(matches);
-// readFile('seedError.txt', 'utf-8').then(function(matches) {
-// 	matches = matches.split('\n');
+// readFile(matchPath + 'KR.json').then(function(matches) {
+//   matches = JSON.parse(matches);
+readFile('seedError.txt', 'utf-8').then(function(matches) {
+	matches = matches.split('\n');
 	//console.log(matches);
 	setInterval(seeder, 1250, matches);
 });

@@ -1,21 +1,21 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
-var models = require('./../models/index2');
+var models = require('./../models/');
 var Item = models.Item;
 var Champion = models.Champion;
 var Participant = models.Participant;
 
 // Champion count
-// Champion.find().exec().then(function(champions) {
-//   champions.forEach(function(champion) {
-//     Participant.count({champion: champion.id, postPatch: true}, function(err, count) { //true
-//       if (err) return console.log(err);
-//       console.log(count);
-//       champion.countPost = count; //Post
-//       champion.save();
-//     });
-//   });
-// });
+Champion.find().exec().then(function(champions) {
+  champions.forEach(function(champion) {
+    Participant.count({champion: champion.id, postPatch: false}, function(err, count) { //true
+      if (err) return console.log(err);
+      console.log(count);
+      champion.countPre = count; //Post
+      champion.save();
+    });
+  });
+});
 
 //Item count
 // Item.find().exec().then(function(items) {
@@ -62,9 +62,9 @@ var Participant = models.Participant;
 //   });
 // });
 
-Champion.findOne().exec().then(function(champ) {
-  console.log(champ.countPost);
-});
+// Champion.findOne().exec().then(function(champ) {
+//   console.log(champ.countPost);
+// });
 
 // function averageOfField(model, field, select){
 //   var total = 0;

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AP Item Changes</title>
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/items">Items</a></li>
+        <li><a href="/champions">Champions</a></li>
+      </ul>
+    </div>
+    <div id="top-menu">
+      {% block top-menu %}{% endblock %}
+    </div>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
