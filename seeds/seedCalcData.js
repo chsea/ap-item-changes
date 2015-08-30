@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
-var models = require('./../models/');
+var models = require('./../models/index');
 var Item = models.Item;
 var Champion = models.Champion;
 var Participant = models.Participant;
@@ -8,10 +8,10 @@ var Participant = models.Participant;
 // Champion count
 Champion.find().exec().then(function(champions) {
   champions.forEach(function(champion) {
-    Participant.count({champion: champion.id, postPatch: false}, function(err, count) { //true
+    Participant.count({champion: champion.id, winner: true, postPatch: true}, function(err, count) { //true
       if (err) return console.log(err);
       console.log(count);
-      champion.countPre = count; //Post
+      champion.winsPost = count; //Post
       champion.save();
     });
   });
@@ -29,23 +29,76 @@ Champion.find().exec().then(function(champions) {
 //   });
 // });
 
-//ItemsPre for Champions
+// ItemsPre for Champions
 // Champion.find().exec().then(function(champions) {
 //   champions.forEach(function(champion) {
-//     Participant.find({champion: champion.id, postPatch: false}).exec().then(function(participants) {
-//       participants.forEach(function(participant) {
-//         participant.items.forEach(function(item) {
-//           champion.itemsPre[item] = champion.itemsPre[item] || 0;
-//           champion.itemsPre[item]++;
-//           console.log('allItems: ', champion.itemsPre);
-//           champion.markModified('itemsPre');
-//           champion.save();
-//         }, {});
+//     champion.itemsPre = [];
+//     champion.itemsPost = [];
+//     console.log(champion.itemsPost);
+//     champion.markModified('itemsPre');
+//     champion.save();
+//   });
+// });
+// Champion.find().exec().then(function(champions) {
+//   champions.forEach(function(champion) {
+//     console.log(champion.id, champion.name);
+//   });
+// });
+// //
+// Champion.find().exec().then(function(champions) {
+//   champions.forEach(function(champion) {
+//     Item.find().then(function(items) {
+//       var itemId = [];
+//       var allItems = [];
+//       items.forEach(function(item, i) {
+//         itemId.push(item.id);
+//         allItems.push(Participant.count({champion: champion.id, items: item.id, postPatch: true}).exec());
+//       });
+//       Promise.all(allItems).then(function(champItems) {
+//         champion.itemsPost = [];
+//         champItems.forEach(function(champItem, i) {
+//           if(champItem > 0) champion.itemsPost.push({id: itemId[i], count: champItem});
+//         });
+//         console.log(champion.itemsPost);
+//         champion.markModified('itemsPost');
+//         champion.save().then(function(champion) {
+//           console.log('postsave', champion.itemsPost);
+//         });
 //       });
 //     });
 //   });
 // });
 
+// , function(err, count) {
+//   if (err) return console.log(err);
+//   champion.itemsPre[i] = {id: item.id, count: count};
+//   console.log('presave', champion.itemsPre);
+//   champion.markModified('itemsPre');
+//   champion.save().then(function(champion) {
+//     console.log('postsave', champion.itemsPre);
+//   });
+  //     participants.forEach(function(participant) {
+  //       participant.items.forEach(function(item) {
+  //         var idx = -1;
+  //         champion.itemsPre.some(function(champItem, i) {
+  //           if (champItem.id === item) {
+  //             idx = i;
+  //             return true;
+  //           }
+  //         });
+  //         if (idx > -1) champion.itemsPre[idx].count++;
+  //         else champion.itemsPre.push({id: item, count: 1});
+  //         console.log(champion.itemsPre);
+  //         champion.markModified('itemsPre');
+  //         champion.save();
+  //       });
+  //     });
+  //   });
+  // });
+//
+// Champion.findOne({id: 82}).exec().then(function(champion) {
+//   console.log(champion.itemsPre.length);
+// });
 //Champions for Items
 // Item.find().exec().then(function(items) {
 //   items.forEach(function(item) {
@@ -62,9 +115,6 @@ Champion.find().exec().then(function(champions) {
 //   });
 // });
 
-// Champion.findOne().exec().then(function(champ) {
-//   console.log(champ.countPost);
-// });
 
 // function averageOfField(model, field, select){
 //   var total = 0;
@@ -106,4 +156,4 @@ Champion.find().exec().then(function(champions) {
 // }
 //
 // // setAvg(Champion, 'avgMagicDamagePre', Participant, 'magicDamage', false, 'champion');
-// setAvg(Champion, 'avgTotalDamageToChampsPost', Participant, 'totalDamageToChamps', true, 'champion');
+// setAvg(Champion, 'avgAssistsPre', Participant, 'assists', false, 'champion');

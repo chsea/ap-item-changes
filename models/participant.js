@@ -22,11 +22,11 @@ participantSchema.methods.hasItem = function(item) {
 };
 
 participantSchema.statics.getTotalMatchesPre = function() {
-  return 398730;
+  return 39873;
 };
 
 participantSchema.statics.getTotalMatchesPost = function() {
-  return 399520;
+  return 39952;
 };
 
 module.exports = mongoose.model('Participant', participantSchema);

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% extends 'champions-top.html' %}
+
+{% block head %}
+	<script src="/scripts/champions/kda.js"></script>
+{% endblock %}
+{% block sub-menu %}
+	<p>Sort by:
+	<select id='sort-by'>
+		<option value="pre">Highest KDA Pre-Patch</option>
+		<option value="post" selected>Highest KDA Post-Patch</option>
+		<option value="difference">Largest Difference</option>
+	</select>
+<script>
+  $('select#sort-by').change(function() {
+  	reCalc('kda', $(this).val(), 'kdaPre', 'kdaPost');
+  });
+</script>
+{% endblock %}

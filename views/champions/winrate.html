@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% extends 'champions-top.html' %}
+
+{% block head %}
+	<script src="/scripts/champions/winrate.js"></script>
+{% endblock %}
+{% block sub-menu %}
+	<p>Sort by:
+	<select id='sort-by'>
+		<option value="pre">Highest Win Rate Pre-Patch</option>
+		<option value="post" selected>Highest Win Rate Post-Patch</option>
+		<option value="difference">Largest Difference</option>
+	</select>
+<script>
+  $('select#sort-by').change(function() {
+  	reCalc('winrate', $(this).val(), 'winRatePre', 'winRatePost');
+  });
+</script>
+{% endblock %}

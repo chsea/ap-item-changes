@@ -1,0 +1,19 @@
+{% extends '../layout.html' %}
+{% extends 'champions-top.html' %}
+
+{% block head %}
+	<script src="/scripts/champions/count.js"></script>
+{% endblock %}
+{% block sub-menu %}
+	<p>Sort by:
+	<select id='sort-by'>
+		<option value="pre">Most Played Pre-Patch</option>
+		<option value="post" selected>Most Played Post-Patch</option>
+		<option value="difference">Largest Difference</option>
+	</select>
+<script>
+  $('select#sort-by').change(function() {
+  	reCalc('count', $(this).val(), 'percentPlayedPre', 'percentPlayedPost');
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends '../layout.html' %}
+{% extends 'champions-top.html' %}
+{% block head %}
+  <script src="/scripts/champions/dmg.js"></script>
+{% endblock %}
+{% block sub-menu %}
+	<p>Sort by:
+	<select id='sort-by'>
+		<option value="pre-magic">Average Magic Damage to Champions Pre-Patch</option>
+		<option value="post-magic">Average Magic Damage to Champions Post-Patch</option>
+		<option value="pre-total">Average Total Damage to Champions Pre-Patch</option>
+		<option value="post-total">Average Total Damage to Champions Post-Patch</option>
+		<option value="difference-magic" selected>Largest Difference in Magic Damage</option>
+		<option value="difference-total">Largest Difference in Total Damage</option>
+	</select>
+<script>
+  $('select#sort-by').change(function() {
+    var bar1 = 'avgTotalDamageToChampsPre', bar2 = 'avgTotalDamageToChampsPost';
+    if ($(this).val() == 'pre-magic' || $(this).val() == 'post-magic' || $(this).val() == 'difference-magic') {
+      bar1 = 'avgMagicDamageToChampsPre';
+      bar2 = 'avgMagicDamageToChampsPost'
+    }
+  	reCalc('damage', $(this).val(), bar1, bar2);
+  });
+</script>
+{% endblock %}

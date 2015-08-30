@@ -1,0 +1,14 @@
+{% extends '../layout.html' %}
+
+{% block top-menu %}
+  <h3><a href="/champions">Most Played Champions</a> | <a href="/champions/kda">Highest KDA</a> | <a href="/champions/damage">Most Damage</a> | <a href="/champions/winrate">Highest Win Rate</a></h3>
+  {% block sub-menu %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+	<canvas id="canvas" width="3500" height="500"></canvas>
+	<div id="custom-tooltip"></div>
+	<script src="/scripts/chart.js"></script>
+  <script src="/scripts/champions/tooltip.js"></script>
+  <script src="/scripts/champions/sort.js"></script>
+{% endblock %}
