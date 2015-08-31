@@ -140,7 +140,20 @@ router.get('/by-kda', function(req, res, next) {
 router.get('/:champion', function(req, res, next) {
   var champName = req.params.champion;
   Champion.findOne({name: champName}).exec().then(function(champ) {
-    res.json({name: champ.name, title: champ.title, countPre: champ.countPre, countPost: champ.countPost, percentPlayedPre: champ.percentPlayedPre, percentPlayedPost: champ.percentPlayedPost, avgKillsPre: champ.avgKillsPre, avgKillsPost: champ.avgKillsPost, avgDeathsPre: champ.avgDeathsPre, avgDeathsPost: champ.avgDeathsPost, avgAssistsPre: champ.avgAssistsPre, avgAssistsPost: champ.avgAssistsPost, avgKdaPre: champ.avgKdaPre, avgKdaPost: champ.avgKdaPost, avgMagicDamageToChampsPre: champ.avgMagicDamageToChampsPre,  avgMagicDamageToChampsPost: champ.avgMagicDamageToChampsPost, avgTotalDamageToChampsPre: champ.avgTotalDamageToChampsPre, avgTotalDamageToChampsPost: champ.avgTotalDamageToChampsPost, winRatePre: champ.winRatePre, winRatePost: champ.winRatePost});
+    var itemsPre = champ.itemsPre.map(function(item) {
+      return {id: item.id, percent: item.count / champ.countPre};
+    }).slice(0, 6);
+    var itemsPost = champ.itemsPost.map(function(item) {
+      return {id: item.id, percent: item.count / champ.countPost};
+    }).slice(0, 6);
+
+    res.json({name: champ.name, title: champ.title, id: champ.id, countPre: champ.countPre, countPost: champ.countPost, percentPlayedPre: champ.percentPlayedPre, percentPlayedPost: champ.percentPlayedPost, avgKillsPre: champ.avgKillsPre, avgKillsPost: champ.avgKillsPost, avgDeathsPre: champ.avgDeathsPre, avgDeathsPost: champ.avgDeathsPost, avgAssistsPre: champ.avgAssistsPre, avgAssistsPost: champ.avgAssistsPost, avgKdaPre: champ.avgKdaPre, avgKdaPost: champ.avgKdaPost, avgMagicDamageToChampsPre: champ.avgMagicDamageToChampsPre,  avgMagicDamageToChampsPost: champ.avgMagicDamageToChampsPost, avgTotalDamageToChampsPre: champ.avgTotalDamageToChampsPre, avgTotalDamageToChampsPost: champ.avgTotalDamageToChampsPost, winRatePre: champ.winRatePre, winRatePost: champ.winRatePost, itemsPre: itemsPre, itemsPost: itemsPost});
+  });
+});
+
+router.get('/id/:id', function(req, res, next) {
+  Champion.getName(req.params.id).then(function(name){
+    res.redirect('/champions/' + name);
   });
 });
 

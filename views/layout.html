@@ -8,17 +8,20 @@
   </head>
   <body>
     <div id="menu">
-      <ul>
+      <div class='logo'>ML<br />BL</div>
+      <ul class="menu-effect">
         <li><a href="/">Home</a></li>
         <li><a href="/items">Items</a></li>
         <li><a href="/champions">Champions</a></li>
       </ul>
     </div>
+    <div id="bg-img"></div>
     <div id="top-menu">
       {% block top-menu %}{% endblock %}
     </div>
     <div id="content">
       {% block content %}{% endblock %}
     </div>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Condensed' rel='stylesheet' type='text/css'>
   </body>
 </html>

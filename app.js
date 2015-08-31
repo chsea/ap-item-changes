@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes'));
+app.use('/items', require('./routes/items'));
 app.use('/champions', require('./routes/champions'));
 
 var server = app.listen(3000, function () {

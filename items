@@ -1,0 +1,1200 @@
+{
+  "_id": ObjectId("55dbfb80d96339f50737d782"),
+  "id": 3073,
+  "name": "Tear of the Goddess (Crystal Scar)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d744"),
+  "id": 1062,
+  "name": "Prospector's Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d745"),
+  "id": 1063,
+  "name": "Prospector's Ring"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d746"),
+  "id": 1074,
+  "name": "Doran's Shield (Showdown)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d747"),
+  "id": 1075,
+  "name": "Doran's Blade (Showdown)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d748"),
+  "id": 1076,
+  "name": "Doran's Ring (Showdown)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74b"),
+  "id": 2009,
+  "name": "Total Biscuit of Rejuvenation"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d751"),
+  "id": 2047,
+  "name": "Oracle's Extract"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d753"),
+  "id": 2050,
+  "name": "Explorer's Ward"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d754"),
+  "id": 2051,
+  "name": "Guardian's Horn"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d755"),
+  "id": 2052,
+  "name": "Poro-Snax"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d757"),
+  "id": 2054,
+  "name": "Diet Poro-Snax"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d760"),
+  "id": 3007,
+  "name": "Archangel's Staff (Crystal Scar)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d761"),
+  "id": 3008,
+  "name": "Manamune (Crystal Scar)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76c"),
+  "id": 3029,
+  "name": "Rod of Ages (Crystal Scar)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d772"),
+  "id": 3043,
+  "name": "Muramana"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d776"),
+  "id": 3048,
+  "name": "Seraph's Embrace"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d789"),
+  "id": 3084,
+  "name": "Overlord's Bloodmail"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78e"),
+  "id": 3090,
+  "name": "Wooglet's Witchcap"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d798"),
+  "id": 3104,
+  "name": "Lord Van Damm's Pillager"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79a"),
+  "id": 3106,
+  "name": "Madred's Razors"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79e"),
+  "id": 3112,
+  "name": "Orb of Winter"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a4"),
+  "id": 3122,
+  "name": "Wicked Hatchet"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a9"),
+  "id": 3137,
+  "name": "Dervish Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b5"),
+  "id": 3154,
+  "name": "Wriggle's Lantern"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ba"),
+  "id": 3159,
+  "name": "Grez's Spectral Lantern"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7bc"),
+  "id": 3170,
+  "name": "Moonflair Spellblade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7bf"),
+  "id": 3180,
+  "name": "Odyn's Veil"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c0"),
+  "id": 3181,
+  "name": "Sanguine Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c1"),
+  "id": 3184,
+  "name": "Entropy"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c2"),
+  "id": 3185,
+  "name": "The Lightbringer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c3"),
+  "id": 3187,
+  "name": "Hextech Sweeper"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c6"),
+  "id": 3196,
+  "name": "The Hex Core mk-1"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c7"),
+  "id": 3197,
+  "name": "The Hex Core mk-2"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c8"),
+  "id": 3198,
+  "name": "Perfect Hex Core"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c9"),
+  "id": 3200,
+  "name": "Prototype Hex Core"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f0"),
+  "id": 3286,
+  "name": "Luden's Echo"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f1"),
+  "id": 3290,
+  "name": "Twin Shadows"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f8"),
+  "id": 3345,
+  "name": "Soul Anchor (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f9"),
+  "id": 3348,
+  "name": "Hextech Sweeper"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ff"),
+  "id": 3460,
+  "name": "Golden Transcendence"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d803"),
+  "id": 3599,
+  "name": "The Black Spear"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7cd"),
+  "id": 3251,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ed"),
+  "id": 3283,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80f"),
+  "id": 3718,
+  "name": "Enchantment: Devourer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d72d"),
+  "id": 1006,
+  "name": "Rejuvenation Bead"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73f"),
+  "id": 1054,
+  "name": "Doran's Shield"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d72f"),
+  "id": 1018,
+  "name": "Cloak of Agility"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75d"),
+  "id": 3003,
+  "name": "Archangel's Staff"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d759"),
+  "id": 2138,
+  "name": "Elixir of Iron"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d771"),
+  "id": 3042,
+  "name": "Muramana"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e6"),
+  "id": 3276,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d809"),
+  "id": 3711,
+  "name": "Poacher's Knife"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d813"),
+  "id": 3722,
+  "name": "Enchantment: Devourer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7cb"),
+  "id": 3222,
+  "name": "Mikael's Crucible"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ec"),
+  "id": 3282,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d811"),
+  "id": 3720,
+  "name": "Enchantment: Magus"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d805"),
+  "id": 3707,
+  "name": "Enchantment: Warrior"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73c"),
+  "id": 1051,
+  "name": "Brawler's Gloves"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75e"),
+  "id": 3004,
+  "name": "Manamune"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d756"),
+  "id": 2053,
+  "name": "Raptor Cloak"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d758"),
+  "id": 2137,
+  "name": "Elixir of Ruin"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d780"),
+  "id": 3071,
+  "name": "The Black Cleaver"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75a"),
+  "id": 2139,
+  "name": "Elixir of Sorcery"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75b"),
+  "id": 2140,
+  "name": "Elixir of Wrath"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e1"),
+  "id": 3271,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d7"),
+  "id": 3261,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d2"),
+  "id": 3256,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7dc"),
+  "id": 3266,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7eb"),
+  "id": 3281,
+  "name": "Enchantment: Captain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d812"),
+  "id": 3721,
+  "name": "Enchantment: Cinderhulk"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7cf"),
+  "id": 3253,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d810"),
+  "id": 3719,
+  "name": "Enchantment: Warrior"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d801"),
+  "id": 3508,
+  "name": "Essence Reaver"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d815"),
+  "id": 3724,
+  "name": "Enchantment: Magus"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80a"),
+  "id": 3713,
+  "name": "Ranger's Trailblazer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d814"),
+  "id": 3723,
+  "name": "Enchantment: Warrior"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d739"),
+  "id": 1039,
+  "name": "Hunter's Machete"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d777"),
+  "id": 3050,
+  "name": "Zeke's Herald"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d796"),
+  "id": 3101,
+  "name": "Stinger"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d795"),
+  "id": 3100,
+  "name": "Lich Bane"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d765"),
+  "id": 3022,
+  "name": "Frozen Mallet"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76a"),
+  "id": 3027,
+  "name": "Rod of Ages"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75c"),
+  "id": 3001,
+  "name": "Abyssal Scepter"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d790"),
+  "id": 3092,
+  "name": "Frost Queen's Claim"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76f"),
+  "id": 3040,
+  "name": "Seraph's Embrace"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a0"),
+  "id": 3114,
+  "name": "Forbidden Idol"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a5"),
+  "id": 3124,
+  "name": "Guinsoo's Rageblade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76e"),
+  "id": 3035,
+  "name": "Last Whisper"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7be"),
+  "id": 3174,
+  "name": "Athene's Unholy Grail"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d766"),
+  "id": 3023,
+  "name": "Twin Shadows"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b3"),
+  "id": 3152,
+  "name": "Will of the Ancients"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78a"),
+  "id": 3085,
+  "name": "Runaan's Hurricane (Ranged Only)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7fe"),
+  "id": 3401,
+  "name": "Face of the Mountain"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80d"),
+  "id": 3716,
+  "name": "Enchantment: Magus"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78f"),
+  "id": 3091,
+  "name": "Wit's End"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a6"),
+  "id": 3134,
+  "name": "The Brutalizer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b1"),
+  "id": 3146,
+  "name": "Hextech Gunblade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f2"),
+  "id": 3301,
+  "name": "Ancient Coin"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7dd"),
+  "id": 3267,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7aa"),
+  "id": 3139,
+  "name": "Mercurial Scimitar"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7bd"),
+  "id": 3172,
+  "name": "Zephyr"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d778"),
+  "id": 3056,
+  "name": "Ohmwrecker"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d770"),
+  "id": 3041,
+  "name": "Mejai's Soulstealer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77a"),
+  "id": 3060,
+  "name": "Banner of Command"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d783"),
+  "id": 3074,
+  "name": "Ravenous Hydra (Melee Only)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f4"),
+  "id": 3303,
+  "name": "Spellthief's Edge"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d804"),
+  "id": 3706,
+  "name": "Stalker's Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d792"),
+  "id": 3096,
+  "name": "Nomad's Medallion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d785"),
+  "id": 3077,
+  "name": "Tiamat (Melee Only)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d793"),
+  "id": 3097,
+  "name": "Targon's Brace"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d817"),
+  "id": 3726,
+  "name": "Enchantment: Devourer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a1"),
+  "id": 3115,
+  "name": "Nashor's Tooth"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d808"),
+  "id": 3710,
+  "name": "Enchantment: Devourer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80e"),
+  "id": 3717,
+  "name": "Enchantment: Cinderhulk"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a8"),
+  "id": 3136,
+  "name": "Haunting Guise"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d799"),
+  "id": 3105,
+  "name": "Aegis of the Legion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7bb"),
+  "id": 3165,
+  "name": "Morellonomicon"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ad"),
+  "id": 3142,
+  "name": "Youmuu's Ghostblade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d794"),
+  "id": 3098,
+  "name": "Frostfang"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b2"),
+  "id": 3151,
+  "name": "Liandry's Torment"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ac"),
+  "id": 3141,
+  "name": "Sword of the Occult"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b6"),
+  "id": 3155,
+  "name": "Hexdrinker"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d0"),
+  "id": 3254,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ce"),
+  "id": 3252,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d3"),
+  "id": 3257,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e8"),
+  "id": 3278,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d8"),
+  "id": 3262,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d4"),
+  "id": 3258,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d9"),
+  "id": 3263,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7da"),
+  "id": 3264,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e3"),
+  "id": 3273,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e7"),
+  "id": 3277,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d5"),
+  "id": 3259,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f3"),
+  "id": 3302,
+  "name": "Relic Shield"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7de"),
+  "id": 3268,
+  "name": "Enchantment: Distortion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80c"),
+  "id": 3715,
+  "name": "Skirmisher's Sabre"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d80b"),
+  "id": 3714,
+  "name": "Enchantment: Warrior"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d816"),
+  "id": 3725,
+  "name": "Enchantment: Cinderhulk"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d800"),
+  "id": 3504,
+  "name": "Ardent Censer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d72e"),
+  "id": 1011,
+  "name": "Giant's Belt"
+}
+{
+  "_id": ObjectId("55dbfb7fd96339f50737d72b"),
+  "id": 1001,
+  "name": "Boots of Speed"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d733"),
+  "id": 1029,
+  "name": "Cloth Armor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d732"),
+  "id": 1028,
+  "name": "Ruby Crystal"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d72c"),
+  "id": 1004,
+  "name": "Faerie Charm"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d734"),
+  "id": 1031,
+  "name": "Chain Vest"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d735"),
+  "id": 1033,
+  "name": "Null-Magic Mantle"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d731"),
+  "id": 1027,
+  "name": "Sapphire Crystal"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d730"),
+  "id": 1026,
+  "name": "Blasting Wand"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74f"),
+  "id": 2044,
+  "name": "Stealth Ward"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d738"),
+  "id": 1038,
+  "name": "B. F. Sword"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73a"),
+  "id": 1042,
+  "name": "Dagger"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d742"),
+  "id": 1057,
+  "name": "Negatron Cloak"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d736"),
+  "id": 1036,
+  "name": "Long Sword"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d740"),
+  "id": 1055,
+  "name": "Doran's Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d749"),
+  "id": 2003,
+  "name": "Health Potion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73d"),
+  "id": 1052,
+  "name": "Amplifying Tome"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73b"),
+  "id": 1043,
+  "name": "Recurve Bow"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d737"),
+  "id": 1037,
+  "name": "Pickaxe"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74e"),
+  "id": 2043,
+  "name": "Vision Ward"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d73e"),
+  "id": 1053,
+  "name": "Vampiric Scepter"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74a"),
+  "id": 2004,
+  "name": "Mana Potion"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74c"),
+  "id": 2010,
+  "name": "Total Biscuit of Rejuvenation"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76b"),
+  "id": 3028,
+  "name": "Chalice of Harmony"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b0"),
+  "id": 3145,
+  "name": "Hextech Revolver"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b7"),
+  "id": 3156,
+  "name": "Maw of Malmortius"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e2"),
+  "id": 3272,
+  "name": "Enchantment: Furor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d806"),
+  "id": 3708,
+  "name": "Enchantment: Magus"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d807"),
+  "id": 3709,
+  "name": "Enchantment: Cinderhulk"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d743"),
+  "id": 1058,
+  "name": "Needlessly Large Rod"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d74d"),
+  "id": 2041,
+  "name": "Crystalline Flask"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d768"),
+  "id": 3025,
+  "name": "Iceborn Gauntlet"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d762"),
+  "id": 3009,
+  "name": "Boots of Swiftness"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d741"),
+  "id": 1056,
+  "name": "Doran's Ring"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d750"),
+  "id": 2045,
+  "name": "Ruby Sightstone"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d763"),
+  "id": 3010,
+  "name": "Catalyst the Protector"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d767"),
+  "id": 3024,
+  "name": "Glacial Shroud"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77c"),
+  "id": 3067,
+  "name": "Kindlegem"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d76d"),
+  "id": 3031,
+  "name": "Infinity Edge"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d752"),
+  "id": 2049,
+  "name": "Sightstone"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d787"),
+  "id": 3082,
+  "name": "Warden's Mail"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77b"),
+  "id": 3065,
+  "name": "Spirit Visage"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d786"),
+  "id": 3078,
+  "name": "Trinity Force"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78c"),
+  "id": 3087,
+  "name": "Statikk Shiv"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d781"),
+  "id": 3072,
+  "name": "The Bloodthirster"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d75f"),
+  "id": 3006,
+  "name": "Berserker's Greaves"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d791"),
+  "id": 3093,
+  "name": "Avarice Blade"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78b"),
+  "id": 3086,
+  "name": "Zeal"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b9"),
+  "id": 3158,
+  "name": "Ionian Boots of Lucidity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d764"),
+  "id": 3020,
+  "name": "Sorcerer's Shoes"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d769"),
+  "id": 3026,
+  "name": "Guardian Angel"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79b"),
+  "id": 3108,
+  "name": "Fiendish Codex"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79f"),
+  "id": 3113,
+  "name": "Aether Wisp"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ae"),
+  "id": 3143,
+  "name": "Randuin's Omen"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b4"),
+  "id": 3153,
+  "name": "Blade of the Ruined King"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7af"),
+  "id": 3144,
+  "name": "Bilgewater Cutlass"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7b8"),
+  "id": 3157,
+  "name": "Zhonya's Hourglass"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d779"),
+  "id": 3057,
+  "name": "Sheen"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d773"),
+  "id": 3044,
+  "name": "Phage"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e0"),
+  "id": 3270,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d774"),
+  "id": 3046,
+  "name": "Phantom Dancer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e5"),
+  "id": 3275,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d6"),
+  "id": 3260,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7db"),
+  "id": 3265,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a7"),
+  "id": 3135,
+  "name": "Void Staff"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d784"),
+  "id": 3075,
+  "name": "Thornmail"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7cc"),
+  "id": 3250,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7d1"),
+  "id": 3255,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d775"),
+  "id": 3047,
+  "name": "Ninja Tabi"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f5"),
+  "id": 3340,
+  "name": "Warding Totem (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7fa"),
+  "id": 3361,
+  "name": "Greater Stealth Totem (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77e"),
+  "id": 3069,
+  "name": "Talisman of Ascension"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ea"),
+  "id": 3280,
+  "name": "Enchantment: Homeguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ef"),
+  "id": 3285,
+  "name": "Luden's Echo"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77d"),
+  "id": 3068,
+  "name": "Sunfire Cape"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d77f"),
+  "id": 3070,
+  "name": "Tear of the Goddess"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d788"),
+  "id": 3083,
+  "name": "Warmog's Armor"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d797"),
+  "id": 3102,
+  "name": "Banshee's Veil"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79d"),
+  "id": 3111,
+  "name": "Mercury's Treads"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d78d"),
+  "id": 3089,
+  "name": "Rabadon's Deathcap"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a3"),
+  "id": 3117,
+  "name": "Boots of Mobility"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d79c"),
+  "id": 3110,
+  "name": "Frozen Heart"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d818"),
+  "id": 3751,
+  "name": "Bami's Cinder"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ca"),
+  "id": 3211,
+  "name": "Spectre's Cowl"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7a2"),
+  "id": 3116,
+  "name": "Rylai's Crystal Scepter"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ab"),
+  "id": 3140,
+  "name": "Quicksilver Sash"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c5"),
+  "id": 3191,
+  "name": "Seeker's Armguard"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f7"),
+  "id": 3342,
+  "name": "Scrying Orb (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7c4"),
+  "id": 3190,
+  "name": "Locket of the Iron Solari"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7df"),
+  "id": 3269,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7fd"),
+  "id": 3364,
+  "name": "Oracle's Lens (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7f6"),
+  "id": 3341,
+  "name": "Sweeping Lens (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7fc"),
+  "id": 3363,
+  "name": "Farsight Orb (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e4"),
+  "id": 3274,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7e9"),
+  "id": 3279,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7ee"),
+  "id": 3284,
+  "name": "Enchantment: Alacrity"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d7fb"),
+  "id": 3362,
+  "name": "Greater Vision Totem (Trinket)"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d802"),
+  "id": 3512,
+  "name": "Zz'Rot Portal"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d81a"),
+  "id": 3801,
+  "name": "Crystalline Bracer"
+}
+{
+  "_id": ObjectId("55dbfb80d96339f50737d819"),
+  "id": 3800,
+  "name": "Righteous Glory"
+}

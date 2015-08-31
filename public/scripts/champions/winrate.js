@@ -23,13 +23,13 @@ window.onload = function(){
 
 		var info = {};
 		info['Win rate pre-patch'] = function(data) {
-			return (data.winRatePre.toFixed(4) * 100) + '%';
+			return (data.winRatePre * 100).toFixed(2) + '%';
 		};
 		info['Win rate post-patch'] = function(data) {
-			return (data.winRatePost.toFixed(4) * 100)  + '%';
+			return (data.winRatePost * 100).toFixed(2)  + '%';
 		};
 		info.Difference = function(data) {
-			return (data.winRatePost - data.winRatePre).toFixed(4) * 100 + '%';
+			return ((data.winRatePost - data.winRatePre) * 100).toFixed(2) + '%';
 		};
 
 		window.myBarChart = new Chart(ctx).Bar(barChartData, {

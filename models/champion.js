@@ -23,7 +23,7 @@ var championSchema = new mongoose.Schema({
   itemsPost: []
 });
 
-championSchema.virtual('avgKdaPostdaPre').get(function() {
+championSchema.virtual('avgKdaPre').get(function() {
   if (this.avgDeathsPre === 0) return this.avgKillsPre + this.avgAssistsPre;
   return (this.avgKillsPre + this.avgAssistsPre) / this.avgDeathsPre;
 });
@@ -48,5 +48,11 @@ championSchema.virtual('winRatePre').get(function() {
 championSchema.virtual('winRatePost').get(function() {
   return (this.winsPost / this.countPost);
 });
+
+championSchema.statics.getName = function(id) {
+  return this.findOne({id: id}).exec().then(function(champ) {
+    return champ.name;
+  });
+};
 
 module.exports = mongoose.model('Champion', championSchema);

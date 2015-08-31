@@ -23,13 +23,13 @@ window.onload = function(){
 
 		var info = {};
 		info['Average Kills/Deaths/Assists pre-patch'] = function(data) {
-			return (data.avgKillsPre.toFixed(2) + ' | ' + data.avgDeathsPre.toFixed(2) + ' | ' + data.avgAssistsPre.toFixed(2) + '(' + data.avgKdaPre +' KDA)');
+			return (data.avgKillsPre.toFixed(2) + ' | ' + data.avgDeathsPre.toFixed(2) + ' | ' + data.avgAssistsPre.toFixed(2) + '(' + data.avgKdaPre.toFixed(2) + ' KDA)');
 		};
 		info['Average Kills/Deaths/Assists post-patch'] = function(data) {
-			return (data.avgKillsPost.toFixed(2) + ' | ' + data.avgDeathsPost.toFixed(2) + ' | ' + data.avgAssistsPost.toFixed(2) + '(' + data.avgKdaPost +' KDA)');
+			return (data.avgKillsPost.toFixed(2) + ' | ' + data.avgDeathsPost.toFixed(2) + ' | ' + data.avgAssistsPost.toFixed(2) + '(' + data.avgKdaPost.toFixed(2) + ' KDA)');
 		};
 		info.Difference = function(data) {
-			return (data.avgKillsPost - data.avgKillsPre).toFixed(2) + '%' + ' | ' + (data.avgDeathsPost - data.avgDeathsPre).toFixed(2) + '%' + ' | ' + (data.avgAssistsPost - data.avgAssistsPre).toFixed(2) + '(' + data.avgKdaPre - data.avgKdaPost + ' kda)';
+			return (data.avgKillsPost - data.avgKillsPre).toFixed(2) + '%' + ' | ' + (data.avgDeathsPost - data.avgDeathsPre).toFixed(2) + '%' + ' | ' + (data.avgAssistsPost - data.avgAssistsPre).toFixed(2) + '(' + (data.avgKdaPre - data.avgKdaPost).toFixed(2) + ' kda)';
 		};
 
 		window.myBarChart = new Chart(ctx).Bar(barChartData, {

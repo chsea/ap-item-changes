@@ -1,0 +1,14 @@
+{% extends '../layout.html' %}
+{% extends 'items-top.html' %}
+
+{% block head %}
+	<script src="/scripts/items/changed.js"></script>
+	<script src="/scripts/chart.js"></script>
+  <script src="/scripts/items/draw-chart.js"></script>
+  <script src="/scripts/items/show-tooltip.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id='changed-content'></div>
+<div id='champ-tooltip' class='tooltip'></div>
+{% endblock %}

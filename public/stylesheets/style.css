@@ -1,58 +1,126 @@
+body {
+  margin: 0
+}
 #bg-img {
   position: fixed;
   top: 0;
-  left: 100px;
+  left: 150px;
   width: 100%;
   height: 100%;
-  background-image: url('../Aatrox_0.jpg');
-  opacity: 0.1;
+  background-image: url('../bg.png');
+  opacity: 1;
   content: '';
+  z-index: -100;
+}
+/*body {
+  background-color: yellow;
+}*/
+a {
+  text-decoration: none;
 }
 /*--------------Menu--------------*/
 #menu {
-  width: 100px;
+  width: 150px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #999;
+  z-index: 5;
+}
+#menu .logo {
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  font-size: 30pt;
 }
 #menu ul {
+  width: 130px;
+  margin: 0 10px;
   list-style: none;
-  margin-left: 5px;
   padding: 0;
+}
+#menu li {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0 3px 10px;
+  margin: 7px 0;
+  border: 0px solid;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+}
+#menu a {
+  font: bold 10pt Roboto Condensed;
+  text-transform: uppercase;
+  color: #435a6b;
+}
+#menu li:hover {
+  border-left: 10px solid #0e83cd;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
 }
 
 /*------------Top Menu------------*/
 #top-menu {
   position: fixed;
   top: 0;
-  left: 110px;
+  left: 160px;
+  z-index: 2;
 }
-#top-menu li {
-  display: inline;
+#top-menu h1 {
+  color: white;
+}
+#top-menu a {
+  color: white;
 }
 
 /*-------------Canvas-------------*/
+#canvas-bg {
+  position: fixed;
+  top: 100px;
+  left: 150px;
+  width: 100%;
+  height: 575px;
+  background-color: black;
+  opacity: 0.7;
+  content: '';
+  z-index: -1;
+  overflow: hidden;
+}
 canvas {
-  margin-left: 110px;
-  margin-top: 100px;
+  margin: 110px 20px 0 170px;
+  opacity: 1;
+}
+
+/*-------------Items-------------*/
+.item {
+  background-color: #999;
 }
 
 /*------------Tool Tip-----------*/
-#custom-tooltip {
+.tooltip {
   display: none;
   width: 300px;
   height: 300px;
   color: white;
   background-color: #333;
   padding: 10px
+  z-index: 10;
 }
-#custom-tooltip img {
+.tooltip li {
+  display: inline;
+}
+.tooltip img {
   width: 75px;
   height: 75px;
 }
-#custom-tooltip h1 {
+
+.tooltip li img {
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip h1 {
   font-size: 10pt;
 }
