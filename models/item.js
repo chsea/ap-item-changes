@@ -5,7 +5,7 @@ var itemSchema = new mongoose.Schema({
   id: {type: Number, required: true, unique: true},
   name: {type: String, required: true},
   changed: {type: Boolean},
-  patchNotes: {},
+  patchNotes: [],
   countPre: Number,
   countPost: Number,
   champsPre: [],

@@ -5,21 +5,23 @@
 	<script src="/scripts/items/count.js"></script>
 {% endblock %}
 {% block sub-menu %}
-	<p>Sort by:
 	<select id='sort-by'>
+		<option value="none" selected>Sort by:</option>
 		<option value="pre">Most Used in Final Builds Pre-Patch</option>
-		<option value="post" selected>Most Used in Final Builds Post-Patch</option>
+		<option value="post">Most Used in Final Builds Post-Patch</option>
 		<option value="difference">Largest Difference</option>
 	</select>
 <script>
   $('select#sort-by').change(function() {
+		if ($(this).val() === 'none') return;
   	reCalc('count', $(this).val(), 'percentUsedPre', 'percentUsedPost');
   });
 </script>
 {% endblock %}
 
 {% block content %}
-	<canvas id="canvas" width="5500" height="500"></canvas>
+  <div id="canvas-bg"></div>
+	<canvas id="canvas" width="6000" height="550"></canvas>
 	<div id="custom-tooltip" class='tooltip'></div>
 	<script src="/scripts/chart.js"></script>
   <script src="/scripts/items/tooltip.js"></script>

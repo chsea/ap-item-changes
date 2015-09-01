@@ -5,14 +5,15 @@
 	<script src="/scripts/champions/count.js"></script>
 {% endblock %}
 {% block sub-menu %}
-	<p>Sort by:
 	<select id='sort-by'>
+		<option value="none" selected>Sort by:</option>
 		<option value="pre">Most Played Pre-Patch</option>
-		<option value="post" selected>Most Played Post-Patch</option>
+		<option value="post">Most Played Post-Patch</option>
 		<option value="difference">Largest Difference</option>
 	</select>
 <script>
   $('select#sort-by').change(function() {
+		if ($(this).val() === 'none') return;
   	reCalc('count', $(this).val(), 'percentPlayedPre', 'percentPlayedPost');
   });
 </script>

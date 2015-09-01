@@ -5,14 +5,15 @@
 	<script src="/scripts/champions/kda.js"></script>
 {% endblock %}
 {% block sub-menu %}
-	<p>Sort by:
 	<select id='sort-by'>
+		<option value="none" selected>Sort by:</option>
 		<option value="pre">Highest KDA Pre-Patch</option>
-		<option value="post" selected>Highest KDA Post-Patch</option>
+		<option value="post">Highest KDA Post-Patch</option>
 		<option value="difference">Largest Difference</option>
 	</select>
 <script>
   $('select#sort-by').change(function() {
+		if ($(this).val() === 'none') return;
   	reCalc('kda', $(this).val(), 'kdaPre', 'kdaPost');
   });
 </script>

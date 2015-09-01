@@ -3,9 +3,9 @@ function drawChart(item) {
     labels : ['Pre-Patch', 'Post-Patch'],
     datasets : [
       {
-        fillColor : "rgba(220,220,220,0.5)",
+        fillColor : "rgba(163,247,70,0.6)",
         strokeColor : "rgba(220,220,220,0.8)",
-        highlightFill: "rgba(220,220,220,0.75)",
+        highlightFill: "rgba(163,247,70,1)",
         highlightStroke: "rgba(220,220,220,1)",
         data : [item.percentUsedPre, item.percentUsedPost]
       }
@@ -16,7 +16,12 @@ function drawChart(item) {
 
   window.myBarChart = new Chart(ctx).Bar(barChartData, {
     responsive: false,
-    scaleLabel: "<%= value + '%'%>",
-    barShowStroke: false
+    scaleGridLineColor: "rgba(100,100,100,.1)",
+    scaleLineColor: "rgba(255,255,255,.3)",
+    scaleLabel: "<%= value + ' %'%>",
+    barShowStroke: false,
+    scaleFontFamily: "Roboto Mono",
+    scaleFontSize: 10,
+    scaleFontColor: "#CCC",
   });
 }

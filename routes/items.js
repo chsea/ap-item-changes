@@ -75,13 +75,13 @@ router.get('/:item', function(req, res, next) {
   var item = req.params.item;
   Item.findOne({name: item}).exec().then(function(item) {
     var champsPre = item.champsPre.map(function(champ) {
-      return {id: champ.id, percent: champ.count / champ.champTotal};
+      return {id: champ.id, percent: (champ.count / champ.champTotal).toFixed(2)};
     });
     champsPre.sort(function(a, b) {
       return b.percent - a.percent;
     });
     var champsPost = item.champsPost.map(function(champ) {
-      return {id: champ.id, percent: champ.count / champ.champTotal};
+      return {id: champ.id, percent: (champ.count / champ.champTotal).toFixed(2)};
     });
     champsPost.sort(function(a, b) {
       return b.percent - a.percent;

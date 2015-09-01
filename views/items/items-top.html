@@ -1,6 +1,6 @@
 {% extends '../layout.html' %}
 
 {% block top-menu %}
-  <h3><a href="/items">All Items</a> | <a href="/items/changed">Changed Items</a></h3>
-  {% block sub-menu %}{% endblock %}
+  <h3><a href="/items">All Items</a> <a href="/items/changed">Changed Items</a></h3>
+  <div id='sub-menu'>{% block sub-menu %}{% endblock %}</div>
 {% endblock %}

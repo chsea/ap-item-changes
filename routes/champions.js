@@ -143,9 +143,15 @@ router.get('/:champion', function(req, res, next) {
     var itemsPre = champ.itemsPre.map(function(item) {
       return {id: item.id, percent: item.count / champ.countPre};
     }).slice(0, 6);
+    itemsPre.sort(function(a, b) {
+      return b.percent - a.percent;
+    });
     var itemsPost = champ.itemsPost.map(function(item) {
       return {id: item.id, percent: item.count / champ.countPost};
     }).slice(0, 6);
+    itemsPost.sort(function(a, b) {
+      return b.percent - a.percent;
+    });
 
     res.json({name: champ.name, title: champ.title, id: champ.id, countPre: champ.countPre, countPost: champ.countPost, percentPlayedPre: champ.percentPlayedPre, percentPlayedPost: champ.percentPlayedPost, avgKillsPre: champ.avgKillsPre, avgKillsPost: champ.avgKillsPost, avgDeathsPre: champ.avgDeathsPre, avgDeathsPost: champ.avgDeathsPost, avgAssistsPre: champ.avgAssistsPre, avgAssistsPost: champ.avgAssistsPost, avgKdaPre: champ.avgKdaPre, avgKdaPost: champ.avgKdaPost, avgMagicDamageToChampsPre: champ.avgMagicDamageToChampsPre,  avgMagicDamageToChampsPost: champ.avgMagicDamageToChampsPost, avgTotalDamageToChampsPre: champ.avgTotalDamageToChampsPre, avgTotalDamageToChampsPost: champ.avgTotalDamageToChampsPost, winRatePre: champ.winRatePre, winRatePost: champ.winRatePost, itemsPre: itemsPre, itemsPost: itemsPost});
   });

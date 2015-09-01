@@ -1,5 +1,6 @@
 body {
-  margin: 0
+  margin: 0;
+  font-family: lato;
 }
 #bg-img {
   position: fixed;
@@ -7,17 +8,15 @@ body {
   left: 150px;
   width: 100%;
   height: 100%;
-  background-image: url('../bg.png');
+  background-image: url('../images/bg.png');
   opacity: 1;
   content: '';
   z-index: -100;
 }
-/*body {
-  background-color: yellow;
-}*/
 a {
   text-decoration: none;
 }
+
 /*--------------Menu--------------*/
 #menu {
   width: 150px;
@@ -29,11 +28,18 @@ a {
   color: #999;
   z-index: 5;
 }
-#menu .logo {
-  box-sizing: border-box;
-  width: 150px;
-  height: 150px;
-  font-size: 30pt;
+#menu h3 {
+  margin: 100px auto 25px;
+	font: italic bold 50px Work Sans;
+  line-height: 40px;
+	text-align: center;
+	background-image: url('../images/bg.png');
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: rgba(0,0,0,0);
+}
+#menu .lower {
+  font-size: 60px;
 }
 #menu ul {
   width: 130px;
@@ -56,7 +62,7 @@ a {
   color: #435a6b;
 }
 #menu li:hover {
-  border-left: 10px solid #0e83cd;
+  border-left: 10px solid #F7464A;
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
 }
@@ -67,12 +73,53 @@ a {
   top: 0;
   left: 160px;
   z-index: 2;
-}
-#top-menu h1 {
   color: white;
+}
+#top-menu h3 {
+  margin: 35px 25px;
+  font: bold 15pt Roboto Condensed;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #435a6b;
+}
+#top-menu .active {
+  color: white!important;
 }
 #top-menu a {
-  color: white;
+  margin: 0 10px;
+  color: #09D8ED;
+  border-bottom: 0px solid;
+  -webkit-transition: border 0.15s;
+  transition: border 0.15s;
+}
+#top-menu a:hover {
+  border-bottom: 5px solid white;
+  -webkit-transition: border 0.15s;
+  transition: border 0.15s;
+  text-shadow: none;
+}
+
+/*------------Sub Menu------------*/
+#sub-menu {
+  position: fixed;
+  top: 37px;
+  right: 25px;
+  z-index: 2;
+}
+#sub-menu p {
+  margin: 0;
+}
+#sub-menu select {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dotted white;
+  border-radius: 0;
+  color: #FFF;
+  text-shadow: 1px 1px #435a6b;
+  font: 10pt Roboto Condensed;
+  text-transform: uppercase;
+}
+#sub-menu select:focus {
+  outline: 0;
 }
 
 /*-------------Canvas-------------*/
@@ -92,35 +139,172 @@ canvas {
   margin: 110px 20px 0 170px;
   opacity: 1;
 }
+/*--------------Index-------------*/
+#index {
+  margin: 50px 0 0 150px;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 10pt;
+}
+#index h3 {
+  font: bold 30pt Roboto Condensed;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #435a6b;
+}
+#index h2 {
+  font-size: 10pt;
+}
+.index-item .item-head {
+  height: 80px;
+  margin: 0;
+}
+.index-item {
+  background-color:rgba(0,0,0,0.7);
+  padding: 30px;
+  margin: 20px 50px;
+  border-radius: 10px;
+  text-align: left;
+}
+.index-item h1 {
+  font: bold 30pt Roboto Condensed;
+  margin: 0;
+  padding-top: 10px;
+}
+.index-item .icon {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding-right: 10px;
+}
+.index-item .title {
+  font-style: bold;
+  color: #09D8ED;
+}
 
 /*-------------Items-------------*/
+#changed-content {
+  margin: 110px 20px 0 170px;
+  width: 7970px;
+  height: 550px;
+  color: white;
+}
 .item {
-  background-color: #999;
+  background-color:rgba(0,0,0,0.7);
+  float: left;
+  height: 490px;
+  padding: 30px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.item .item-head {
+  height: 110px;
+  margin: 0;
+}
+.item h1 {
+  font: bold 30pt Roboto Condensed;
+  margin: 0;
+}
+.item .canvas-el {
+  clear: both;
+  content: '';
+}
+.item canvas {
+  margin: 0;
+  clear: both;
+}
+.item ul {
+  list-style: none;
+}
+.item li {
+  display: inline-block;
+}
+.item li img {
+  width: 25px;
+  height: 25px;
+}
+.item .icon {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding-right: 10px;
 }
 
 /*------------Tool Tip-----------*/
 .tooltip {
   display: none;
-  width: 300px;
-  height: 300px;
-  color: white;
-  background-color: #333;
-  padding: 10px
+  width: 275px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #FFF;
+  padding: 20px;
   z-index: 10;
+  color: black;
+  font-size: 10pt;
+  text-align: center;
 }
-.tooltip li {
+.tooltip .inner {
+  width: auto;
+  margin: auto;
+}
+.tooltip .icon, .item .icon {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding-right: 10px;
+}
+.tooltip h1, .item h1 {
+  font: bold 30pt Roboto Condensed;
+  margin: 0;
+  text-align: left;
+}
+.tooltip h2 {
+  font: 10pt Roboto Condensed;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.tooltip .info, .item .info {
+  margin-top: 10px;
+  clear: both;
+  text-align: left;
+}
+.tooltip .tooltip-title, .item .tooltip-title {
+  font-weight: bold;
+  text-align: left;
+}
+.tooltip .tooltip-info, .item .tooltip-info {
+  text-align: center;
+}
+.tooltip .num, .item .num {
+  font-family: Roboto Mono;
+}
+.tooltip .red, .item .red {
+  color: #F7464A
+}
+.tooltip .blue, .item .blue {
+  color: #09D8ED
+}
+.tooltip .inlineEl, .item .inlineEl {
   display: inline;
+  margin-bottom: -5px;
 }
-.tooltip img {
-  width: 75px;
-  height: 75px;
+.tooltip ul, .item ul {
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
 }
-
-.tooltip li img {
+.tooltip li, .item li {
+  display: inline-block;
+  width: 40px;
+  font: 8pt Roboto Mono;
+  text-align: center;
+}
+.tooltip li img, .item li img {
   width: 25px;
   height: 25px;
-}
-
-.tooltip h1 {
-  font-size: 10pt;
 }
